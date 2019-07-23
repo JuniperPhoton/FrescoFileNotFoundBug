@@ -25,7 +25,7 @@ If you run into my issue, your logcat should look like:
 
 ## Temporary fixes
 
-The classes under `com.juniperphoton.frescobug.storage` packaga are copied from `Fresco` and are the same, which are used to perform some temporary fixes.
+The classes under `com.juniperphoton.frescobug.storage` package are copied from `Fresco` and are the same, which are used to perform some temporary fixes.
 
 I have found that there are some potential fixes:
 
