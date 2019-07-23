@@ -1,4 +1,4 @@
-package com.juniperphoton.frescorfsfixingbug
+package com.juniperphoton.frescobug
 
 val urls = mutableListOf<String>().apply {
     repeat(400) {

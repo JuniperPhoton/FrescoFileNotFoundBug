@@ -19,6 +19,8 @@ To produce the same issue, please following the same steps:
 
 If you run into my issue, your logcat should look like:
 
+![](./01.png)
+
 ## Temporary fixes
 
 The classes under `com.juniperphoton.frescorfsfixingbug.storage` packaga are copied from `Fresco` and are the same, which are used to perform some temporary fixes.

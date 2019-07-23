@@ -1,4 +1,4 @@
-package com.juniperphoton.frescorfsfixingbug.storage;
+package com.juniperphoton.frescobug.storage;
 
 import androidx.annotation.Nullable;
 import com.facebook.binaryresource.BinaryResource;

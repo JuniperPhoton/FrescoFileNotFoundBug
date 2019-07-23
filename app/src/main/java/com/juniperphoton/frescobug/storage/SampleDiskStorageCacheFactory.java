@@ -1,4 +1,4 @@
-package com.juniperphoton.frescorfsfixingbug.storage;
+package com.juniperphoton.frescobug.storage;
 
 import com.facebook.cache.disk.DiskCacheConfig;
 import com.facebook.cache.disk.DiskStorage;

@@ -1,4 +1,4 @@
-package com.juniperphoton.frescorfsfixingbug
+package com.juniperphoton.frescobug
 
 import android.os.Bundle
 import android.util.Log

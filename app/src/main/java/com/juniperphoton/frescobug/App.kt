@@ -1,11 +1,11 @@
-package com.juniperphoton.frescorfsfixingbug
+package com.juniperphoton.frescobug
 
 import android.app.Application
 import com.facebook.cache.disk.DiskCacheConfig
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.imagepipeline.backends.okhttp3.OkHttpImagePipelineConfigFactory
-import com.juniperphoton.frescorfsfixingbug.storage.SampleDiskStorageCacheFactory
-import com.juniperphoton.frescorfsfixingbug.storage.SampleDynamicDiskStorageFactory
+import com.juniperphoton.frescobug.storage.SampleDiskStorageCacheFactory
+import com.juniperphoton.frescobug.storage.SampleDynamicDiskStorageFactory
 import okhttp3.OkHttpClient
 import java.util.concurrent.TimeUnit
 

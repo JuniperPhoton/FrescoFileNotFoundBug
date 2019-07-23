@@ -1,4 +1,4 @@
-package com.juniperphoton.frescorfsfixingbug
+package com.juniperphoton.frescobug
 
 import android.net.Uri
 import com.facebook.binaryresource.FileBinaryResource

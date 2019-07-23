@@ -1,4 +1,4 @@
-package com.juniperphoton.frescorfsfixingbug.storage;
+package com.juniperphoton.frescobug.storage;
 
 import android.os.Environment;
 import androidx.annotation.Nullable;
