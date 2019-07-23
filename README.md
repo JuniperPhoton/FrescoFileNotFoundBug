@@ -4,7 +4,9 @@ This demo demonstrates an issue on this situation:
 
 > Massively and concurrently fetching images from network and insert them into disk cache immediately, and then read the files on the same thread.
 
-The issue is that **sometimes** it throws `java.io.FileNotFoundException` on reading saved files, even if the files do exist. The files can still be found using Android Studio's Device File Explorer can of course be opened. 
+By saying `Massively and concurrently` I mean doing the work on every 50ms, please refer to `MainActivity` for more details.
+
+The issue is that **sometimes** it throws `java.io.FileNotFoundException` on reading saved files by opening a `FileInputStream`, even if the files do exist. The files can still be found using Android Studio's Device File Explorer can of course be opened. 
 
 Furthermore, if you try to open the file exported by `content://` by other apps, or do a thread sleeping before accessing them, it will work.
 
