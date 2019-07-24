@@ -26,6 +26,8 @@ If you run into my issue, your logcat should look like:
 
 ![](./01.png)
 
+If there are any exceptions on opening `FileInputStream`, I will print a log with error level. In production environment, after getting the cached file, I try to decode to a Bitmap, which of course will also lead to failure.
+
 ## Temporary fixes
 
 The classes under `com.juniperphoton.frescobug.storage` package are copied from `Fresco` and are the same, which are used to perform some temporary fixes.
