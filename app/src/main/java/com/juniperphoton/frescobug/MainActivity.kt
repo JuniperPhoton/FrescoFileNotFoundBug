@@ -57,12 +57,12 @@ class MainActivity : AppCompatActivity() {
             if (f == null) {
                 Log.e(DEBUG_TAG, "file is null: $url")
             } else {
-                tryDecodeBitmapBounds(url, currentIndex, f)
+                tryReadingFile(url, currentIndex, f)
             }
         }
     }
 
-    private fun tryDecodeBitmapBounds(originalUrl: String, index: Int, file: File) {
+    private fun tryReadingFile(originalUrl: String, index: Int, file: File) {
         var fis: FileInputStream? = null
         try {
             fis = FileInputStream(file)
