@@ -4,7 +4,10 @@ This demo demonstrates an issue on this situation:
 
 > Massively and concurrently fetching images from network and insert them into disk cache immediately, and then read the files on the same thread.
 
-By saying `Massively and concurrently` I mean doing the work on every 50ms, please refer to `MainActivity` for more details.
+By saying `Massively and concurrently` I mean doing the work on every 50ms, please refer to [`MainActivity`](https://github.com/JuniperPhoton/FrescoFileNotFoundBug/blob/master/app/src/main/java/com/juniperphoton/frescobug/MainActivity.kt) for more details.
+
+To know how to insert file into the existed disk cache, see [`FetchDataSubscriber`](https://github.com/JuniperPhoton/FrescoFileNotFoundBug/blob/master/app/src/main/java/com/juniperphoton/frescobug/FetchDataSubscriber.kt).
+
 
 The issue is that **sometimes** it throws `java.io.FileNotFoundException` on reading saved files by opening a `FileInputStream`, even if the files do exist. The files can still be found using Android Studio's Device File Explorer can of course be opened. 
 
@@ -29,6 +32,6 @@ The classes under `com.juniperphoton.frescobug.storage` package are copied from 
 
 I have found that there are some potential fixes:
 
-1. `Thread.sleep(300)` before accessing saved files (of course, I can't accept this solution)
+1. `Thread.sleep(xxx)` before accessing saved files (of course, I can't accept this solution)
 2. Change `SHARDING_BUCKET_COUNT` static field value from `100` to `10`, or modify the logic to **NOT** to save files to different buckets, e.g. from `/cache/image_caches/v2.ols200.1/63/9uXqYoOXvaVWkoSFzqrpdhua0bg.cnt` to `/cache/image_caches/v2.ols200.1/9uXqYoOXvaVWkoSFzqrpdhua0bg.cnt`
-3. Shorten the name of `resourceId`, which will shorten the temp file and content file's name.
+3. Shorten the name of `resourceId` (like `resourceId = resourceId.substring(0, 5)`), which will shorten the temp file and content file's name.
